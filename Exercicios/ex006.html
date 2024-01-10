@@ -7,20 +7,38 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair" -->
   
   <div>
     <h1>elementos Parent e Child em um DOM</h1>
     <p>Seja positivo em seus piores momentos</p>
     <p>suas palavras podem se voltar cntra você</p>
-    <div>
-      <input id="area" class="favorite" type="button" onclick="clicar()" onmouseenter="entrar()" value="Interaja"/>
+    <div id="area">
+      Interaja
     </div>
     <script>
-     function clicar(){
-      var area = document.getElementById('area');
-      a.innerText = 'Clicou';
-     }
-     
+    //  function clicar(){
+    //   var area = document.getElementById('area');
+    //   a.innerText = 'Clicou';
+    //  }
+
+    var a = document.getElementById('area')
+      a.addEventListener("click", clicar);
+      a.addEventListener("mouseenter", entrar);
+      a.addEventListener("mouseout", sair);
+// os Listener são como ouvidores, que ficam de olho dentro do html
+      function clicar(){
+        a.innerText = 'clicou!'
+        a.style.background = 'purple'
+      }
+      function entrar(){
+        a.innerText = 'Entrou!'
+        a.style.background = 'green'
+      }
+      function sair(){
+        a.innerText = 'Saiu!'
+        a.style.background = 'blue'
+      }
     </script>
   </div>
 </body>
