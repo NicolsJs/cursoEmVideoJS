@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nacionalidade</title>
+</head>
+<body>
+	<h1>Sistema de Nacionalidade</h1>
+	<p>Onde você naceu?</p><input type="text" name="nacio" id="nacio">
+	<button id="botao" onclick="clicarBotao()">descubra</button>
+	<script>
+		function clicarBotao(){
+			var localNasc = document.getElementById('nacio').value;
+
+			if (localNasc === "Brasil") {
+				console.log("Você e brasileiro !");
+			} else {
+				console.log("Estrangeiro");
+			}
+		}
+		
+	</script>
+</body>
+</html>
